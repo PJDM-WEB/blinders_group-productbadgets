@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "model": "claude-sonnet-4-20250514",
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(tree:*)",
+      "Bash(php -l:*)",
+      "Bash(php -r:*)",
+      "Bash(composer validate:*)",
+      "Read(**)",
+      "Write(modules/productbadges/**)",
+      "Write(.claude/**)",
+      "Write(README.md)",
+      "Write(IA.md)",
+      "Write(COMMITS.md)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(git push:*)",
+      "Bash(mysql:*)",
+      "Bash(mysqldump:*)",
+      "Write(sql/**)"
+    ]
+  },
+  "env": {
+    "PS_VERSION": "1.7.8.11",
+    "PHP_VERSION": "8.1",
+    "MODULE_NAME": "productbadges",
+    "DB_PREFIX": "ps_"
+  },
+  "context": {
+    "includeFiles": [
+      ".claude/CLAUDE.md",
+      "modules/productbadges/productbadges.php",
+      "modules/productbadges/classes/ProductBadge.php"
+    ]
+  }
+}
